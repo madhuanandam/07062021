@@ -1,8 +1,6 @@
 pipeline{
     agent any
-    tools{
-        maven 'Maven'
-    }
+   
     environment{
         NEW_VERSION = '1.3.0'
         //SERVER_CREDENTIALS = credentials('server_credentials')
@@ -12,7 +10,7 @@ pipeline{
             steps{
                 echo 'building app'
                 echo "upgraded to '${New_Version}'"
-                sh "mvn install"
+                
             }
         }
         
